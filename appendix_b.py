@@ -143,8 +143,8 @@ def covered_by(code: str, items) -> list:
     d = digits(code)
     if not d.isdigit() or len(d) < 4:
         return []
-    c10 = d.ljust(10, "0")
-    return [(it.num, s.raw, s.qualifier) for it in items for s in it.specs if s.matches(c10)]
+    lo, hi = d.ljust(10, "0"), d.ljust(10, "9")
+    return [(it.num, s.raw, s.qualifier) for it in items for s in it.specs if s.lo <= hi and lo <= s.hi]
 
 
 def write_csv(items, out: Path):
