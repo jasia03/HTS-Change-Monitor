@@ -1,0 +1,65 @@
+1. 1704.90.3550 | Sugars and sugar confectionary
+2. 2207.10.60xx-2207.20.00xx | Beverages, spirits and vinegar
+3. 2404 | Tobacco and manufactured tobacco substitutes; products intended for inhalation without combustion; other nicotine containing products
+4. 2712 | Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes
+5. 2806-2843, 2847-2850, 2853 | Inorganic chemicals; organic compounds of precious metals, rare earth metals, radioactive elements and isotopes
+6. 3004 (people only), 3006.50 | Pharmaceutical products
+7. Chapter 32 inclusive | Tanning or dyeing extracts; dyes; pigments; paints and varnishes; putty; inks
+8. Chapter 33 inclusive | Essential oils and resinoids; perfumery, cosmetic or toilet preparations
+9. Chapter 34 inclusive | Soap, surface-active agents, washing and lubricating preparations, waxes, candles, modeling pastes, dental preparations
+10. Chapter 35 inclusive | Albuminoidal substances; modified starches; glues; enzymes
+11. 3604.10.9010, 3604.10.9050, 3604.90.0000, 3605, 3606.10, 3606.90 | Explosives; pyrotechnic products; matches; pyrophoric alloys; certain combustible preparations
+12. 3701.20 -3701.99, 3702.31-3702.98, 3703-3707 | Photographic or cinematographic goods
+13. 3801-3824 | Miscellaneous chemical products
+14. 3916-3925, 3926 (except 3926.20.1010 and 3926.90.3000) | Plastics and articles thereof
+15. 4011.10.50xx, 4011.50.0000, 4012.90, 4013.20.0000, 4014, 4015.19-4015.90, 4016 (except 4016.10.0000, 4016.94.0000, 4016.99.3000, 4016.99.5500, 4016.99.6010) | Rubber and articles thereof
+16. 4202- 4203, 4205.00.2000, 4206.00.1910 | Articles of leather; saddlery and harness; travel goods, handbags and similar containers
+17. 4303 | Furskins and artificial furs, manufactures thereof
+18. 4402, 4403.11.0040-4403.11.0060, 4403.12.0040-4403.12.0060, 4403.21.0015-4403.21.0016, 4403.22.0015-4403.22.0016, 4403.23.0015-4403.23.0016, 4403.24.0015-4403.24.0016, 4403.25.0015-4403.25.0016, 4403.26.0015-4403.26.0016, 4403.99.0026-4403.99.0029, 4403.99.0128, 4404.10.0040-4404.10.0080, 4404.20.0040-4404.20.0080, 4408-4414, 4417-4420, 4421.10.0000-4421.91.8800, 4421.91.9400-4421.91.9720, 4421.91.9770-4421.91.9780, 4421.99.1000-4421.99.8800, 4421.99.9400-4421.99.9720, 4421.99.9770-4421.99.9780 | Wood and articles of wood; wood charcoal
+19. 4503-4504 | Cork and articles of cork
+20. Chapter 46 inclusive | Manufactures of straw, esparto or other plaiting materials; basketware and wickerwork
+21. 4802-4811, 4813-4823 | Paper and paperboard; articles of paper pulp, paper or paperboard
+22. 4901-4905, 4908-4911 | Printed books, newspapers, pictures and other products of the printing industry
+23. 5006, 5007 | Silk
+24. 5109-5113 | Wool, fine or coarse animal hair; horsehair yarn and woven fabric
+25. 5204.20.0000, 5207-5212 | Cotton
+26. 5306-5311 | Other vegetable textile fibers; paper yarn and woven fabric of paper yarn
+27. Chapter 54 inclusive | Man-made filaments
+28. 5508-5516 | Man-made staple fibers
+29. 5601.10, 5602-5609 | Wadding, felt and nonwovens; special yarns, twine, cordage, ropes and cables
+30. Chapter 57 inclusive | Carpets and other textile floor coverings
+31. Chapter 58 inclusive | Special woven fabrics; tufted textile fabrics; lace, tapestries; trimmings; embroidery
+32. 5904-5906, 5908-5909 | Impregnated, coated, covered or laminated textile fabrics; textile articles for industrial use
+33. Chapter 60 inclusive | Knitted or crocheted fabrics
+34. Chapter 61 inclusive | Articles of apparel and clothing accessories, knitted or crocheted
+35. Chapter 62 inclusive | Articles of apparel and clothing accessories, not knitted or crocheted
+36. 6301-6305, 6306.12-6306.29, 6306.40-6306.99, 6307.10.0000-6307.90.5020, 6307.90.7500-6307.90.8500, 6307.90.8940-6307.90.9891, 6308 | Other made up textile articles; sets; worn clothing; rags
+37. Chapter 64 inclusive | Footwear, gaiters and the like; parts of such articles
+38. Chapter 65 inclusive | Headgear and parts thereof
+39. Chapter 66 inclusive | Umbrellas, walking sticks, seat sticks, whips, riding-crops and parts thereof
+40. 6702 | Prepared feathers and down; artificial flowers; articles of human hair
+41. 6803-6805, 6807-6812, 6814 | Articles of stone, plaster, cement, asbestos, mica or similar materials
+42. 6904-6907, 6910-6913 | Ceramic products
+43. 7007.19.0000, 7007.29.0000, 7008, 7009.91-7009.92, 7010.10-7010.20, 7010.90.20xx-7010.90.50xx, 7013, 7016, 7017, 7018, 7019.39.10xx, 7019.80.10xx | Glass and glassware
+44. 7113, 7114, 7116.20.05xx, 7116.20.15xx, 7117 | Pearls, precious stones and metals, and articles thereof; imitation jewelry
+45. 7308-7309, 7311-7314, 7315.11.0010-7319, 7320.20.50xx, 7320.90.50xx, 7321-7324, 7325.10.0020-7325.10.0025, 7326.20.0020, 7326.90.2500, 7326.90.3500, 7326.90.8605-7326.90.8676, 7326.90.8688 | Articles of iron or steel
+46. 7411-7418 (except 7412.20.0015 where not CPSC), 7419.10, 7419.91, 7419.99.1500, 7419.99.3000-7419.99.5050, 7419.20, 7419.80.15xx, 7419.80.17xx-7419.80.50xx | Copper and articles thereof
+47. 7507 | Nickel and articles thereof
+48. 7608-7616 (except 7610.90.0060) | Aluminum and articles thereof
+49. 7806.00.0500-7806.00.8000 | Lead and articles thereof
+50. 7907 | Zinc and articles thereof
+51. 8007.00.1010-8007.00.1050, 8007.00.4000 | Tin and articles thereof
+52. 8108.90.6060, 8108.90.6075 | Other base metals; cermets; articles thereof
+53. 8201-8208.20, 8208.40.3000, 8210-8215 | Tools, implements, cutlery, spoons and forks, of base metal
+54. 8301-8302.49.4000, 8302.49.6035, 8302.49.6085, 8302.49.8090, 8302.50.0000-8311 | Miscellaneous articles of base metal
+55. 8402-8405, 8407.33.3040-8407.33.9080, 8407.34.1400-8407.34.2500, 8407.90.90xx, 8408.90.90xx, 8409.91.1040 8409.91.1080, 8401.91.30xx-8409.91.50xx, 8409.91.99xx, 8413.20.0000, 8413.70.20xx, 8413.81.0030, 8414.10-8414.20, 8414.40, 8414.51, 8414.80.1685 -8414.80.1690, 8414.80.9000, 8414.90.10xx, 8415.10, 8415.81-8415.83, 8415.90.4000, 8415.90.8010, 8415.90.8020, 8415.90.8050, 8415.90.8070, 8415.90.8085, 8416, 8418, 8419.11-8419.19, 8419.81 (except 8419.81.5040), 8419.90.1000, 8419.90.9580, 8421.12.0000-8421.22.0000, 8421.39.8005-8421.39.8015, 8421.91-8421.99, 8422.11.0000, 8422.20.0000, 8422.90.0200-8422.90.0640, 8423.10, 8423.81.0040, 8423.81.0050, 8424.10-8424.30, 8424.89, 8424.90, 8425, 8428.10-8428.60, 8430.20.00xx, 8431.10.00xx, 8431.31.00xx, 8431.39.0010, 8432.29.0060, 8433.11-8433.20, 8433.90.1000, 8435, 8443.31-8443.39, 8443.99, 8450, 8451.21-8451.29, 8452.10, 8452.30, 8452.90.0010, 8458-8473, 8474.31.0000, 8476, 8479.60.0000, 8479.82.00xx, 8479.89.1000-8479.89.7000, 8479.89.9860, 8479.89.9885, 8479.89.9899, 8479.90.41xx-8479.90.85xx | Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof
+56. 8501.31.81xx, 8501.32.61xx, 8501.33.6100, 8501.34.6100, 8501.61-8501.64, 8502-8511, 8512.10, 8512.20.2080, 8512.20.4080, 8512.30.0020, 8512.30.0040, 8512.90.2000-8512.90.6000, 8512.90.9000, 8513, 8514.20.4000, 8514.90.4000, 8515-8523, 8525 (except 8525.80.1000-8525.80.3000), 8526 (except 8526.10.0020), 8527, 8528, 8529 (except 8529.90.0900), 8531.10, 8532-8542, 8543.70.6000, 8543.70.8800-8543.70.9500, 8543.70.98xx, 8544.11-8544.20, 8544.42-8544.70 | Electrical machinery and equipment and parts thereof; sound and television recorders and reproducers
+57. 8703.10-8703.22, 8703.31, 8703.40-8703.90, 8704.10.5020, 8706.00.1540, 8706.00.5000, 8707.10.0090, 8708 where applies, 8711 where applies (off road), 8712-8715, 8716.10 (campers), 8716.80.50xx, 8716.90.30xx where applies, 8716.90.50xx where applies | Vehicles other than railway or tramway rolling-stock, and parts and accessories thereof
+58. 8806.21-8806.23 | Aircraft, spacecraft, and parts thereof
+59. 9002-9005, 9006.40-9006.99, 9008, 9011-9013, 9014.10, 9017, 9019.10.20xx, 9025.11.4000, 9025.19.8085, 9025.80, 9025.90.0600, 9029.10.8000, 9029.20.2000, 9029.20.4080, 9029.90.4000, 9029.90.80xx, 9032 | Optical, photographic, measuring, checking, precision, medical or surgical instruments; parts and accessories
+60. 9101-9103, 9105-9114 | Clocks and watches and parts thereof
+61. Chapter 92 inclusive | Musical instruments; parts and accessories
+62. 9304.00 | Arms and ammunition; parts and accessories thereof
+63. 9401 (except aircraft and automotive), 9401.80.6020 (portion of child safety seats), 9403 (except aircraft or automotive), 9404-9406 | Furniture; bedding, mattresses, cushions; lamps and lighting fittings; illuminated signs; prefabricated buildings
+64. Chapter 95 inclusive | Toys, games and sports requisites; parts and accessories thereof
+65. 9603.10, 9603.30-9603.90, 9604-9617, 9619-9620 | Miscellaneous manufactured articles
