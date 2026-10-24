@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-10-24T20:49:56Z",
+  "from_release": "2026HTSRev10",
+  "to_release": "2026HTSRev11",
+  "urgency": "red",
+  "headline": "45 changes affect CPSC-watched codes",
+  "overview": "Of 333 changes in 2026HTSRev11, 45 touch CPSC-watched codes, 51 need a decision and 7 are worth checking. 11 watched codes were removed, split or renumbered, so CPSC targeting may need updating. 3 changes are Chapter 99 tariff provisions, which do not affect product coverage.",
+  "total_changes": 333,
+  "tier_counts": {
+    "1": 45,
+    "needs_review": 51,
+    "2": 7,
+    "3": 0,
+    "not_relevant": 230
+  },
+  "type_counts": {
+    "added": 214,
+    "renumbered": 43,
+    "possible_split": 31,
+    "desc_changed": 30,
+    "split": 12,
+    "rate_changed": 3
+  },
+  "top_changes": [
+    {
+      "code": "3507.90.70.00",
+      "tier": "1",
+      "change_type": "renumbered",
+      "summary": "Code 3507.90.70.00 (Other: Other) was renumbered to 3507.90.70.80.",
+      "related_codes": "3507.90.70.80"
+    },
+    {
+      "code": "3926.90.99.10",
+      "tier": "1",
+      "change_type": "possible_split",
+      "summary": "Code 3926.90.99.10 (Other: Laboratory ware) was removed, and new codes 3926.90.99.15 and 3926.90.99.20 appeared in the same group; they may replace it, so a person should check.",
+      "related_codes": "3926.90.99.15; 3926.90.99.20"
+    },
+    {
+      "code": "7113.19.29.00",
+      "tier": "1",
+      "change_type": "renumbered",
+      "summary": "Code 7113.19.29.00 (Necklaces and neck chains, of gold: Other) was renumbered to 7113.19.29.90.",
+      "related_codes": "7113.19.29.90"
+    },
+    {
+      "code": "8307.10.60.00",
+      "tier": "1",
+      "change_type": "renumbered",
+      "summary": "Code 8307.10.60.00 (Of iron or steel: Other) was renumbered to 8307.10.60.60.",
+      "related_codes": "8307.10.60.60"
+    },
+    {
+      "code": "8424.30.90.00",
+      "tier": "1",
+      "change_type": "renumbered",
+      "summary": "Code 8424.30.90.00 (Steam or sand blasting machines and similar jet projecting machines: Other) was renumbered to 8424.30.90.90.",
+      "related_codes": "8424.30.90.90"
+    },
+    {
+      "code": "8424.90.90.40",
+      "tier": "1",
+      "change_type": "possible_split",
+      "summary": "Code 8424.90.90.40 (Other: Of steam and similar jet projecting machines) was removed, and new codes 8424.90.90.10 and 8424.90.90.20 appeared in the same group; they may replace it, so a person should check.",
+      "related_codes": "8424.90.90.10; 8424.90.90.20"
+    },
+    {
+      "code": "8504.40.95.70",
+      "tier": "1",
+      "change_type": "possible_split",
+      "summary": "Code 8504.40.95.70 (Other: Inverters) was removed, and new codes 8504.40.95.71, 8504.40.95.73, 8504.40.95.75, 8504.40.95.77, 8504.40.95.78 and 8504.40.95.79 appeared in the same group; they may replace it, so a person should check.",
+      "related_codes": "8504.40.95.71; 8504.40.95.73; 8504.40.95.75; 8504.40.95.77; 8504.40.95.78; 8504.40.95.79"
+    },
+    {
+      "code": "8507.20.80.10",
+      "tier": "1",
+      "change_type": "possible_split",
+      "summary": "Code 8507.20.80.10 (Other: Of a kind described in subheading 9903.45.25) was removed, and new codes 8507.20.80.92 appeared in the same group; they may replace it, so a person should check.",
+      "related_codes": "8507.20.80.92"
+    }
+  ]
+}

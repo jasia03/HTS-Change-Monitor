@@ -3,13 +3,11 @@ Build the outputs people see, from summarize.py's files:
 
     data/outputs/<new release>/report.html       full report, alert card at the top
     data/outputs/<new release>/alert.json        the alert as data (read by the Chrome extension)
-    data/outputs/<new release>/alert_email.html  the alert card for email (styles inline, no JS/SVG)
 
 Usage:
     python report.py --latest                 # newest file in data/summaries
     python report.py data/summaries/summarized_2026HTSRev10_2026HTSRev11.csv
-    add --publish to also copy the three files into docs/latest/ (served by GitHub Pages)
-    add --report-url https://<user>.github.io/<repo>/latest/report.html for the email button
+    add --publish to also copy report.html and alert.json into docs/latest/ (served by GitHub Pages)
 """
 import argparse
 import csv
@@ -51,7 +49,7 @@ TIER_COLOR = {"1": "var(--red)", "needs_review": "var(--amber)", "2": "var(--ste
 
 # ---------- the alert, as data ----------
 
-def build_alert(changes, rel, overview, report_url=""):
+def build_alert(changes, rel, overview):
     tiers = Counter(c["tier"] for c in changes)
     types = Counter(c["change_type"] for c in changes)
     watched = tiers["1"]
@@ -77,7 +75,6 @@ def build_alert(changes, rel, overview, report_url=""):
             "code": c["code_display"], "tier": c["tier"], "change_type": c["change_type"],
             "summary": c.get("summary", ""), "related_codes": c.get("related_codes", ""),
         } for c in top],
-        "report_url": report_url,
     }
 
 
@@ -384,53 +381,9 @@ def review_script(alert):
 """ % rel
 
 
-# ---------- the email version (inline styles, tables, no SVG or scripts) ----------
-
-def render_email(alert):
-    light, _ = URGENCY[alert["urgency"]]
-    counts = alert["tier_counts"]
-    count_cells = "".join(
-        f'<td style="padding:6px 14px 6px 0;font:14px Arial,sans-serif;color:#5B6875">'
-        f'{escape(TIER_LABEL[t])}<br><b style="font-size:20px;color:#17212B">{counts[t]}</b></td>'
-        for t in TIERS if counts[t])
-    rows = "".join(
-        f'<tr><td style="padding:10px 0;border-top:1px solid #DCE2E8;font:15px/1.45 Arial,sans-serif;'
-        f'color:#17212B"><b>{escape(TYPE_LABEL.get(c["change_type"], c["change_type"]))} '
-        f'{escape(c["code"])}</b><br>{escape(c["summary"])}</td></tr>'
-        for c in alert["top_changes"][:5])
-    button = (f'<tr><td style="padding-top:18px"><a href="{escape(alert["report_url"])}" '
-              f'style="display:inline-block;background:#2F6690;color:#FFFFFF;text-decoration:none;'
-              f'font:600 15px Arial,sans-serif;padding:11px 20px;border-radius:8px">Open the full report</a>'
-              f'</td></tr>' if alert["report_url"] else
-              '<tr><td style="padding-top:14px;font:14px Arial,sans-serif;color:#5B6875">'
-              'The full report is attached.</td></tr>')
-    return f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
-<title>{escape(alert['headline'])}</title></head>
-<body style="margin:0;padding:24px 12px;background:#F4F6F8">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
-  style="max-width:600px;margin:0 auto;background:#FFFFFF;border:1px solid #DCE2E8;border-radius:12px;
-  border-top:6px solid {light}">
-<tr><td style="padding:24px 26px">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-  <tr><td style="font:14px Arial,sans-serif;color:#5B6875">HTS {escape(alert['to_release'])},
-    compared with {escape(alert['from_release'])}</td></tr>
-  <tr><td style="padding:6px 0 10px;font:700 26px/1.2 Arial,sans-serif;color:#17212B">
-    {escape(alert['headline'])}</td></tr>
-  <tr><td style="font:15px/1.5 Arial,sans-serif;color:#17212B">{escape(alert['overview'])}</td></tr>
-  <tr><td style="padding-top:14px"><table role="presentation" cellpadding="0" cellspacing="0">
-    <tr>{count_cells}</tr></table></td></tr>
-  {rows and f'<tr><td style="padding-top:12px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">{rows}</table></td></tr>'}
-  {button}
-  </table>
-</td></tr></table>
-</body></html>
-"""
-
-
 # ---------- running it ----------
 
-def run_file(path, report_url="", publish=False):
+def run_file(path, publish=False):
     path = Path(path)
     with open(path, encoding="utf-8-sig") as f:
         changes = list(csv.DictReader(f))
@@ -438,18 +391,17 @@ def run_file(path, report_url="", publish=False):
     overview_path = path.with_name(path.name.replace("summarized_", "overview_")).with_suffix(".txt")
     overview = overview_path.read_text(encoding="utf-8").strip() if overview_path.exists() else ""
 
-    alert = build_alert(changes, rel, overview, report_url)
+    alert = build_alert(changes, rel, overview)
     out = OUTPUTS / rel[1]
     out.mkdir(parents=True, exist_ok=True)
     (out / "report.html").write_text(render_report(changes, alert), encoding="utf-8")
     (out / "alert.json").write_text(json.dumps(alert, indent=2), encoding="utf-8")
-    (out / "alert_email.html").write_text(render_email(alert), encoding="utf-8")
     print(f"{rel[0]} -> {rel[1]}: {alert['headline']} ({alert['urgency']})")
-    print(f"  saved {out}/report.html, alert.json, alert_email.html")
+    print(f"  saved {out}/report.html and alert.json")
 
     if publish:
         PUBLISH.mkdir(parents=True, exist_ok=True)
-        for name in ("report.html", "alert.json", "alert_email.html"):
+        for name in ("report.html", "alert.json"):
             shutil.copy(out / name, PUBLISH / name)
         print(f"  copied to {PUBLISH}/ (commit and push to update GitHub Pages)")
     return alert
@@ -460,7 +412,6 @@ def main():
     ap.add_argument("file", nargs="?")
     ap.add_argument("--latest", action="store_true")
     ap.add_argument("--publish", action="store_true", help="copy outputs into docs/latest/")
-    ap.add_argument("--report-url", default="", help="public link to report.html, for the email button")
     args = ap.parse_args()
 
     files = sorted(SUMMARIES.glob("summarized_*.csv"), key=lambda p: p.stat().st_mtime)
@@ -473,7 +424,7 @@ def main():
     if not files:
         ap.error("no files in data/summaries (run summarize.py first)")
     for p in files:
-        run_file(p, args.report_url, args.publish)
+        run_file(p, args.publish)
 
 
 if __name__ == "__main__":

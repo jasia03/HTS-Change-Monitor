@@ -1,0 +1,5 @@
+﻿from_release,to_release,code,change_type,field,tool_tier,verdict,correct_tier,note,reviewer,reviewed_at
+2026HTSRev10,2026HTSRev11,3507.90.70.00,renumbered,,1,correct,,,jasia,2026-10-24T20:07:45.296Z
+2026HTSRev10,2026HTSRev11,3818.00.00.95,split,,1,wrong,not_relevant,but might need in the future - a potential tier 4,jasia,2026-10-24T20:08:11.576Z
+2026HTSRev10,2026HTSRev11,3926.90.99.10,possible_split,,1,correct,,,jasia,2026-10-24T20:08:15.896Z
+2026HTSRev10,2026HTSRev11,7113.19.29.00,renumbered,,1,wrong,,,jasia,2026-10-24T20:08:18.946Z

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T20:23:35Z",
+  "generated_at": "2026-10-24T20:49:56Z",
   "from_release": "2026HTSRev10",
   "to_release": "2026HTSRev11",
   "urgency": "red",
   "headline": "45 changes affect CPSC-watched codes",
-  "overview": "HTS 2026HTSRev11 compared with 2026HTSRev10: 333 changes, 103 of them relevant to CPSC. By relevance: Tier 1 (covered) 45, needs review 51, Tier 2 (near a rule) 7, not relevant 230. By type: added 214, renumbered 43, possible_split 31, desc_changed 30, split 12, rate_changed 3. 11 watched codes were removed, split or renumbered; CPSC targeting may need updating.",
+  "overview": "Of 333 changes in 2026HTSRev11, 45 touch CPSC-watched codes, 51 need a decision and 7 are worth checking. 11 watched codes were removed, split or renumbered, so CPSC targeting may need updating. 3 changes are Chapter 99 tariff provisions, which do not affect product coverage.",
   "total_changes": 333,
   "tier_counts": {
     "1": 45,
@@ -78,6 +78,5 @@
       "summary": "Code 8507.20.80.10 (Other: Of a kind described in subheading 9903.45.25) was removed, and new codes 8507.20.80.92 appeared in the same group; they may replace it, so a person should check.",
       "related_codes": "8507.20.80.92"
     }
-  ],
-  "report_url": ""
+  ]
 }

@@ -202,18 +202,32 @@ def llm_rewrite(changes, client, cache):
 
 def template_overview(changes, rel):
     tiers = Counter(c["tier"] for c in changes)
-    kinds = Counter(c["change_type"] for c in changes)
-    relevant = sum(tiers[t] for t in RELEVANT)
-    lines = [f"HTS {rel[1]} compared with {rel[0]}: {len(changes)} changes, "
-             f"{relevant} of them relevant to CPSC."]
-    lines.append("By relevance: " + ", ".join(f"{TIER_NAMES[t]} {tiers[t]}"
-                                              for t in TIER_NAMES if tiers[t]) + ".")
-    lines.append("By type: " + ", ".join(f"{k} {v}" for k, v in kinds.most_common()) + ".")
-    urgent = [c for c in changes if c["tier"] == "1" and c.get("priority") == "1"]
+    total = len(changes)
+
+    def n(count, one, many):
+        return f"{count} {one if count == 1 else many}"
+
+    parts = []
+    if tiers["1"]:
+        parts.append(n(tiers["1"], "touches CPSC-watched codes", "touch CPSC-watched codes"))
+    if tiers["needs_review"]:
+        parts.append(n(tiers["needs_review"], "needs a decision", "need a decision"))
+    if tiers["2"] + tiers["3"]:
+        parts.append(n(tiers["2"] + tiers["3"], "is worth checking", "are worth checking"))
+    if parts:
+        joined = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " and " + parts[-1]
+        lines = [f"Of {n(total, 'change', 'changes')} in {rel[1]}, {joined}."]
+    else:
+        lines = [f"None of the {n(total, 'change', 'changes')} in {rel[1]} affect CPSC-watched codes."]
+
+    urgent = sum(1 for c in changes if c["tier"] == "1" and c.get("priority") == "1")
     if urgent:
-        n = len(urgent)
-        lines.append(f"{n} watched code{'s were' if n != 1 else ' was'} removed, split or renumbered; "
-                     f"CPSC targeting may need updating.")
+        lines.append(f"{n(urgent, 'watched code was', 'watched codes were')} removed, split or "
+                     f"renumbered, so CPSC targeting may need updating.")
+    ch99 = sum(1 for c in changes if c.get("chapter") == "99")
+    if ch99:
+        lines.append(f"{n(ch99, 'change is a Chapter 99 tariff provision', 'changes are Chapter 99 tariff provisions')}, "
+                     f"which do not affect product coverage.")
     return " ".join(lines)
 
 

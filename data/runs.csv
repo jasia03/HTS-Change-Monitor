@@ -1,0 +1,7 @@
+run_at,result,old,new,headline,detail
+2026-10-24T20:46:07Z,checked,2026HTSRev20,2026HTSRev21,,new release
+2026-10-24T20:46:09Z,failed,2026HTSRev20,2026HTSRev21,,could not download 2026HTSRev20: HTTP 403 (https://www.usitc.gov/sites/default/files/tata/hts/hts_2026_revision_20_json.json)
+2026-10-24T20:46:09Z,failed,2026HTSRev10,2026HTSRev11,,Report failed: AttributeError: 'bool' object has no attribute 'replace'
+2026-10-24T20:49:02Z,,2026HTSRev10,2026HTSRev11,,
+2026-10-24T20:49:53Z,published,2026HTSRev10,2026HTSRev11,45 changes affect CPSC-watched codes,
+2026-10-24T20:53:34Z,failed,2026HTSRev20,2026HTSRev21,,could not download 2026HTSRev20: HTTP 403 (https://www.usitc.gov/sites/default/files/tata/hts/hts_2026_revision_20_json.json)

@@ -96,8 +96,8 @@ def test_api_failure_falls_back_to_templates():
 def test_no_client_means_templates_and_overview():
     changes = [change("8707.10.00.40", "deleted"), change("0101.21.00.10", "added", tier="not_relevant")]
     overview, source, _ = summarize(changes, ("RevA", "RevB"), None)
-    assert source == "template" and "2 changes, 1 of them relevant to CPSC" in overview
-    assert "1 watched code was removed" in overview
+    assert source == "template" and "Of 2 changes in RevB, 1 touches CPSC-watched codes." in overview
+    assert "1 watched code was removed, split or renumbered" in overview
 
 
 if __name__ == "__main__":
