@@ -1,0 +1,295 @@
+﻿item,rule,kind,qualifier,lines_covered,status
+1,1704.90.3550,prefix,,1,OK
+2,2207.10.60xx-2207.20.00xx,range,,4,OK
+3,2404,prefix,,14,OK
+4,2712,prefix,,4,OK
+5,2806-2843,range,,239,OK
+5,2847-2850,range,,13,OK
+5,2853,prefix,,5,OK
+6,3004,prefix,people only,138,OK
+6,3006.50,prefix,,1,OK
+7,Chapter 32 inclusive,chapter,,168,OK
+8,Chapter 33 inclusive,chapter,,74,OK
+9,Chapter 34 inclusive,chapter,,48,OK
+10,Chapter 35 inclusive,chapter,,33,OK
+11,3604.10.9010,prefix,,1,OK
+11,3604.10.9050,prefix,,1,OK
+11,3604.90.0000,prefix,,1,OK
+11,3605,prefix,,2,OK
+11,3606.10,prefix,,1,OK
+11,3606.90,prefix,,3,OK
+12,3701.20 -3701.99,range,,8,OK
+12,3702.31-3702.98,range,,22,OK
+12,3703-3707,range,,27,OK
+13,3801-3824,range,,186,OK
+14,3916-3925,range,,156,OK
+14,3926,prefix,,52,OK
+15,4011.10.50xx,prefix,,1,OK
+15,4011.50.0000,prefix,,1,OK
+15,4012.90,prefix,,5,OK
+15,4013.20.0000,prefix,,1,OK
+15,4014,prefix,,3,OK
+15,4015.19-4015.90,range,,5,OK
+15,4016,prefix,,17,OK
+16,4202- 4203,range,,109,OK
+16,4205.00.2000,prefix,,1,OK
+16,4206.00.1910,prefix,,1,OK
+17,4303,prefix,,3,OK
+18,4402,prefix,,3,OK
+18,4403.11.0040-4403.11.0060,range,,3,OK
+18,4403.12.0040-4403.12.0060,range,,3,OK
+18,4403.21.0015-4403.21.0016,range,,0,NO MATCH - stale code or typo?
+18,4403.22.0015-4403.22.0016,range,,0,NO MATCH - stale code or typo?
+18,4403.23.0015-4403.23.0016,range,,0,NO MATCH - stale code or typo?
+18,4403.24.0015-4403.24.0016,range,,0,NO MATCH - stale code or typo?
+18,4403.25.0015-4403.25.0016,range,,0,NO MATCH - stale code or typo?
+18,4403.26.0015-4403.26.0016,range,,0,NO MATCH - stale code or typo?
+18,4403.99.0026-4403.99.0029,range,,0,NO MATCH - stale code or typo?
+18,4403.99.0128,prefix,,1,OK
+18,4404.10.0040-4404.10.0080,range,,2,OK
+18,4404.20.0040-4404.20.0080,range,,2,OK
+18,4408-4414,range,,247,OK
+18,4417-4420,range,,66,OK
+18,4421.10.0000-4421.91.8800,range,,17,OK
+18,4421.91.9400-4421.91.9720,range,,1,OK
+18,4421.91.9770-4421.91.9780,range,,0,NO MATCH - stale code or typo?
+18,4421.99.1000-4421.99.8800,range,,15,OK
+18,4421.99.9400-4421.99.9720,range,,1,OK
+18,4421.99.9770-4421.99.9780,range,,0,NO MATCH - stale code or typo?
+19,4503-4504,range,,15,OK
+20,Chapter 46 inclusive,chapter,,49,OK
+21,4802-4811,range,,238,OK
+21,4813-4823,range,,71,OK
+22,4901-4905,range,,27,OK
+22,4908-4911,range,,21,OK
+23,5006,prefix,,2,OK
+23,5007,prefix,,21,OK
+24,5109-5113,range,,59,OK
+25,5204.20.0000,prefix,,1,OK
+25,5207-5212,range,,432,OK
+26,5306-5311,range,,53,OK
+27,Chapter 54 inclusive,chapter,,265,OK
+28,5508-5516,range,,367,OK
+29,5601.10,prefix,,0,NO MATCH - stale code or typo?
+29,5602-5609,range,,72,OK
+30,Chapter 57 inclusive,chapter,,74,OK
+31,Chapter 58 inclusive,chapter,,111,OK
+32,5904-5906,range,,14,OK
+32,5908-5909,range,,3,OK
+33,Chapter 60 inclusive,chapter,,106,OK
+34,Chapter 61 inclusive,chapter,,838,OK
+35,Chapter 62 inclusive,chapter,,1247,OK
+36,6301-6305,range,,166,OK
+36,6306.12-6306.29,range,,9,OK
+36,6306.40-6306.99,range,,4,OK
+36,6307.10.0000-6307.90.5020,range,,14,OK
+36,6307.90.7500-6307.90.8500,range,,2,OK
+36,6307.90.8940-6307.90.9891,range,,17,OK
+36,6308,prefix,,2,OK
+37,Chapter 64 inclusive,chapter,,391,OK
+38,Chapter 65 inclusive,chapter,,64,OK
+39,Chapter 66 inclusive,chapter,,8,OK
+40,6702,prefix,,5,OK
+41,6803-6805,range,,16,OK
+41,6807-6812,range,,29,OK
+41,6814,prefix,,2,OK
+42,6904-6907,range,,49,OK
+42,6910-6913,range,,45,OK
+43,7007.19.0000,prefix,,1,OK
+43,7007.29.0000,prefix,,1,OK
+43,7008,prefix,,1,OK
+43,7009.91-7009.92,range,,10,OK
+43,7010.10-7010.20,range,,3,OK
+43,7010.90.20xx-7010.90.50xx,range,,19,OK
+43,7013,prefix,,64,OK
+43,7016,prefix,,4,OK
+43,7017,prefix,,5,OK
+43,7018,prefix,,6,OK
+43,7019.39.10xx,prefix,,0,NO MATCH - stale code or typo?
+43,7019.80.10xx,prefix,,3,OK
+44,7113,prefix,,21,OK
+44,7114,prefix,,11,OK
+44,7116.20.05xx,prefix,,1,OK
+44,7116.20.15xx,prefix,,1,OK
+44,7117,prefix,,15,OK
+45,7308-7309,range,,17,OK
+45,7311-7314,range,,52,OK
+45,7315.11.0010-7319,range,,98,OK
+45,7320.20.50xx,prefix,,4,OK
+45,7320.90.50xx,prefix,,3,OK
+45,7321-7324,range,,60,OK
+45,7325.10.0020-7325.10.0025,range,,2,OK
+45,7326.20.0020,prefix,,1,OK
+45,7326.90.2500,prefix,,1,OK
+45,7326.90.3500,prefix,,1,OK
+45,7326.90.8605-7326.90.8676,range,,8,OK
+45,7326.90.8688,prefix,,1,OK
+46,7411-7418,range,where not CPSC,37,OK
+46,7419.10,prefix,,0,NO MATCH - stale code or typo?
+46,7419.91,prefix,,0,NO MATCH - stale code or typo?
+46,7419.99.1500,prefix,,0,NO MATCH - stale code or typo?
+46,7419.99.3000-7419.99.5050,range,,0,NO MATCH - stale code or typo?
+46,7419.20,prefix,,2,OK
+46,7419.80.15xx,prefix,,1,OK
+46,7419.80.17xx-7419.80.50xx,range,,4,OK
+47,7507,prefix,,3,OK
+48,7608-7616,range,,56,OK
+49,7806.00.0500-7806.00.8000,range,,2,OK
+50,7907,prefix,,3,OK
+51,8007.00.1010-8007.00.1050,range,,2,OK
+51,8007.00.4000,prefix,,1,OK
+52,8108.90.6060,prefix,,1,OK
+52,8108.90.6075,prefix,,1,OK
+53,8201-8208.20,range,,122,OK
+53,8208.40.3000,prefix,,1,OK
+53,8210-8215,range,,59,OK
+54,8301-8302.49.4000,range,,45,OK
+54,8302.49.6035,prefix,,1,OK
+54,8302.49.6085,prefix,,1,OK
+54,8302.49.8090,prefix,,1,OK
+54,8302.50.0000-8311,range,,37,OK
+55,8402-8405,range,,14,OK
+55,8407.33.3040-8407.33.9080,range,,6,OK
+55,8407.34.1400-8407.34.2500,range,,3,OK
+55,8407.90.90xx,prefix,,5,OK
+55,8408.90.90xx,prefix,,5,OK
+55,8409.91.1040,prefix,,1,OK
+55,8409.91.1080,prefix,,1,OK
+55,8409.91.30xx-8409.91.50xx,range,,4,OK
+55,8409.91.99xx,prefix,,2,OK
+55,8413.20.0000,prefix,,1,OK
+55,8413.70.20xx,prefix,,8,OK
+55,8413.81.0030,prefix,,1,OK
+55,8414.10-8414.20,range,,2,OK
+55,8414.40,prefix,,1,OK
+55,8414.51,prefix,,3,OK
+55,8414.80.1685 -8414.80.1690,range,,2,OK
+55,8414.80.9000,prefix,,1,OK
+55,8414.90.10xx,prefix,,2,OK
+55,8415.10,prefix,,5,OK
+55,8415.81-8415.83,range,,17,OK
+55,8415.90.4000,prefix,,1,OK
+55,8415.90.8010,prefix,,1,OK
+55,8415.90.8020,prefix,,1,OK
+55,8415.90.8050,prefix,,1,OK
+55,8415.90.8070,prefix,,1,OK
+55,8415.90.8085,prefix,,1,OK
+55,8416,prefix,,5,OK
+55,8418,prefix,,36,OK
+55,8419.11-8419.19,range,,4,OK
+55,8419.81,prefix,,3,OK
+55,8419.90.1000,prefix,,1,OK
+55,8419.90.9580,prefix,,1,OK
+55,8421.12.0000-8421.22.0000,range,,4,OK
+55,8421.39.8005-8421.39.8015,range,,0,NO MATCH - stale code or typo?
+55,8421.91-8421.99,range,,5,OK
+55,8422.11.0000,prefix,,1,OK
+55,8422.20.0000,prefix,,1,OK
+55,8422.90.0200-8422.90.0640,range,,3,OK
+55,8423.10,prefix,,3,OK
+55,8423.81.0040,prefix,,1,OK
+55,8423.81.0050,prefix,,1,OK
+55,8424.10-8424.30,range,,6,OK
+55,8424.89,prefix,,2,OK
+55,8424.90,prefix,,6,OK
+55,8425,prefix,,7,OK
+55,8428.10-8428.60,range,,9,OK
+55,8430.20.00xx,prefix,,3,OK
+55,8431.10.00xx,prefix,,2,OK
+55,8431.31.00xx,prefix,,3,OK
+55,8431.39.0010,prefix,,1,OK
+55,8432.29.0060,prefix,,1,OK
+55,8433.11-8433.20,range,,14,OK
+55,8433.90.1000,prefix,,0,NO MATCH - stale code or typo?
+55,8435,prefix,,2,OK
+55,8443.31-8443.39,range,,18,OK
+55,8443.99,prefix,,12,OK
+55,8450,prefix,,11,OK
+55,8451.21-8451.29,range,,4,OK
+55,8452.10,prefix,,2,OK
+55,8452.30,prefix,,1,OK
+55,8452.90.0010,prefix,,0,NO MATCH - stale code or typo?
+55,8458-8473,range,,437,OK
+55,8474.31.0000,prefix,,1,OK
+55,8476,prefix,,5,OK
+55,8479.60.0000,prefix,,1,OK
+55,8479.82.00xx,prefix,,2,OK
+55,8479.89.1000-8479.89.7000,range,,5,OK
+55,8479.89.9860,prefix,,0,NO MATCH - stale code or typo?
+55,8479.89.9885,prefix,,0,NO MATCH - stale code or typo?
+55,8479.89.9899,prefix,,0,NO MATCH - stale code or typo?
+55,8479.90.41xx-8479.90.85xx,range,,6,OK
+56,8501.31.81xx,prefix,,1,OK
+56,8501.32.61xx,prefix,,1,OK
+56,8501.33.6100,prefix,,1,OK
+56,8501.34.6100,prefix,,1,OK
+56,8501.61-8501.64,range,,7,OK
+56,8502-8511,range,,165,OK
+56,8512.10,prefix,,2,OK
+56,8512.20.2080,prefix,,1,OK
+56,8512.20.4080,prefix,,1,OK
+56,8512.30.0020,prefix,,1,OK
+56,8512.30.0040,prefix,,1,OK
+56,8512.90.2000-8512.90.6000,range,,3,OK
+56,8512.90.9000,prefix,,1,OK
+56,8513,prefix,,4,OK
+56,8514.20.4000,prefix,,1,OK
+56,8514.90.4000,prefix,,1,OK
+56,8515-8523,range,,139,OK
+56,8525,prefix,,21,OK
+56,8526,prefix,,5,OK
+56,8527,prefix,,27,OK
+56,8528,prefix,,79,OK
+56,8529,prefix,,45,OK
+56,8531.10,prefix,,4,OK
+56,8532-8542,range,,280,OK
+56,8543.70.6000,prefix,,1,OK
+56,8543.70.8800-8543.70.9500,range,,5,OK
+56,8543.70.98xx,prefix,,3,OK
+56,8544.11-8544.20,range,,5,OK
+56,8544.42-8544.70,range,,13,OK
+57,8703.10-8703.22,range,,8,OK
+57,8703.31,prefix,,1,OK
+57,8703.40-8703.90,range,,45,OK
+57,8704.10.5020,prefix,,1,OK
+57,8706.00.1540,prefix,,1,OK
+57,8706.00.5000,prefix,,1,OK
+57,8707.10.0090,prefix,,1,OK
+57,8708,prefix,where applies,121,OK
+57,8711,prefix,where applies; off road,15,OK
+57,8712-8715,range,,44,OK
+57,8716.10,prefix,campers,2,OK
+57,8716.80.50xx,prefix,,3,OK
+57,8716.90.30xx,prefix,where applies,1,OK
+57,8716.90.50xx,prefix,where applies,8,OK
+58,8806.21-8806.23,range,,3,OK
+59,9002-9005,range,,25,OK
+59,9006.40-9006.99,range,,31,OK
+59,9008,prefix,,7,OK
+59,9011-9013,range,,19,OK
+59,9014.10,prefix,,5,OK
+59,9017,prefix,,17,OK
+59,9019.10.20xx,prefix,,7,OK
+59,9025.11.4000,prefix,,1,OK
+59,9025.19.8085,prefix,,1,OK
+59,9025.80,prefix,,6,OK
+59,9025.90.0600,prefix,,1,OK
+59,9029.10.8000,prefix,,1,OK
+59,9029.20.2000,prefix,,1,OK
+59,9029.20.4080,prefix,,1,OK
+59,9029.90.4000,prefix,,1,OK
+59,9029.90.80xx,prefix,,2,OK
+59,9032,prefix,,24,OK
+60,9101-9103,range,,12,OK
+60,9105-9114,range,,68,OK
+61,Chapter 92 inclusive,chapter,,63,OK
+62,9304.00,prefix,,3,OK
+63,9401,prefix,aircraft; automotive,88,OK
+63,9401.80.6020,prefix,portion of child safety seats,0,NO MATCH - stale code or typo?
+63,9403,prefix,aircraft; automotive,86,OK
+63,9404-9406,range,,98,OK
+64,Chapter 95 inclusive,chapter,,118,OK
+65,9603.10,prefix,,7,OK
+65,9603.30-9603.90,range,,14,OK
+65,9604-9617,range,,83,OK
+65,9619-9620,range,,37,OK

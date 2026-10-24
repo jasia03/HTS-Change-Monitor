@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTS Change Monitor</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<main>
+  <section id="card" class="card" hidden aria-labelledby="headline">
+    <div class="head">
+      <p class="releases" id="releases"></p>
+      <h1 id="headline"></h1>
+      <p class="overview" id="overview"></p>
+    </div>
+    <div class="body">
+      <div class="strip" id="strip" aria-hidden="true"></div>
+      <ul class="legend" id="legend"></ul>
+      <ol class="changes" id="changes"></ol>
+      <button type="button" class="primary" id="open">Open full report</button>
+    </div>
+  </section>
+
+  <p class="error" id="error" role="status" hidden></p>
+
+  <section id="setup" class="setup" hidden>
+    <h1 id="setup-title">Connect to your alert</h1>
+    <p id="setup-text">Paste the address of the <code>alert.json</code> your pipeline publishes. The extension checks it every 30 minutes.</p>
+    <form id="setup-form">
+      <label for="url">Address of alert.json</label>
+      <input id="url" type="url" required placeholder="https://yourname.github.io/hts-monitor/latest/alert.json">
+      <div class="row">
+        <button type="submit" class="primary">Save and check</button>
+        <button type="button" id="cancel" class="link" hidden>Cancel</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <span id="checked"></span>
+    <button type="button" class="link" id="check">Check now</button>
+    <button type="button" class="link" id="settings">Settings</button>
+  </footer>
+</main>
+<script src="shared.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-item,description,kind,raw,lo,hi,excludes,qualifier,needs_review
+﻿item,description,kind,raw,lo,hi,excludes,qualifier,needs_review
 1,Sugars and sugar confectionary,prefix,1704.90.3550,1704903550,1704903550,,,
 2,"Beverages, spirits and vinegar",range,2207.10.60xx-2207.20.00xx,2207106000,2207200099,,,
 3,Tobacco and manufactured tobacco substitutes; products intended for inhalation without combustion; other nicotine containing products,prefix,2404,2404000000,2404999999,,,
@@ -155,7 +155,7 @@ item,description,kind,raw,lo,hi,excludes,qualifier,needs_review
 55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",prefix,8408.90.90xx,8408909000,8408909099,,,
 55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",prefix,8409.91.1040,8409911040,8409911040,,,
 55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",prefix,8409.91.1080,8409911080,8409911080,,,
-55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",range,8401.91.30xx-8409.91.50xx,8401913000,8409915099,,,
+55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",range,8409.91.30xx-8409.91.50xx,8409913000,8409915099,,,
 55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",prefix,8409.91.99xx,8409919900,8409919999,,,
 55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",prefix,8413.20.0000,8413200000,8413200000,,,
 55,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",prefix,8413.70.20xx,8413702000,8413702099,,,

@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-10-23T21:04:41Z",
+  "from_release": "2026HTSRev15",
+  "to_release": "2026HTSRev21",
+  "urgency": "grey",
+  "headline": "No changes affect CPSC-watched codes",
+  "overview": "HTS 2026HTSRev21 compared with 2026HTSRev15: 18 changes, 0 of them relevant to CPSC. By relevance: not relevant 18. By type: added 16, rate_changed 1, units_changed 1.",
+  "total_changes": 18,
+  "tier_counts": {
+    "1": 0,
+    "needs_review": 0,
+    "2": 0,
+    "3": 0,
+    "not_relevant": 18
+  },
+  "type_counts": {
+    "added": 16,
+    "rate_changed": 1,
+    "units_changed": 1
+  },
+  "top_changes": [],
+  "report_url": ""
+}

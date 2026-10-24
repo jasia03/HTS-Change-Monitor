@@ -1,0 +1,1 @@
+HTS 2026HTSRev21 compared with 2026HTSRev15: 18 changes, 0 of them relevant to CPSC. By relevance: not relevant 18. By type: added 16, rate_changed 1, units_changed 1.

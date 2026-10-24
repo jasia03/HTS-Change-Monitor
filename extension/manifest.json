@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "HTS Change Monitor",
+  "version": "0.1.0",
+  "description": "Alerts CPSC staff when a new HTS revision changes codes they watch.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "HTS Change Monitor",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["alarms", "notifications", "storage"],
+  "host_permissions": ["https://*.github.io/*", "http://localhost/*", "http://127.0.0.1/*"]
+}
