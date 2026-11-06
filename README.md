@@ -1,71 +1,75 @@
-# Task 1: USITC data access, Appendix B parsing, historical revisions
+# HTS Change Monitor
 
-## Run it
+A protoype for **U.S. Consumer Product Safety Commission (CPSC)**. It checks for new releases of the U.S. Harmonized Tariff Schedule (HTS), finds what changed, flags the changes that touch codes CPSC watches, and alerts staff through a Chrome extension and a web report.
+
+## How it works
+
+1. **Watch:** asks USITC which HTS release is current.
+2. **Download:** gets the full schedule for that release and the one before it.
+3. **Diff:** lists every code added, removed, split, renumbered or reworded.
+4. **Relevance:** labels each change by checking it against CPSC's Appendix B (294 rules).
+5. **Summarize:** writes one plain-English sentence per change.
+6. **Publish:** builds a report and an alert file that the Chrome extension reads.
+
+## Tiers
+
+| Tiers | Meaning | What to do |
+| --- | --- | --- |
+| Covered | Matches an Appendix B rule | Act on it |
+| Needs a decision | Matches only a rule with a condition, like "8708 where applies" | A person decides |
+| Near a watched rule | Same 6-digit subheading as a narrow rule, but not on it | Consider adding it |
+| Similar wording | Description contains a CPSC product word | Check the scope |
+| Not relevant | None of the above | Listed, never hidden |
+
+## Ways to Run the pipeline
 
 ```bash
-pip install requests
-python appendix_b.py                                   # parse Appendix B, run self-checks
-python download_hts.py                                 # pulls all 55 releases (2025 + 2026)
-python validate_appendix_b.py data/raw/2026HTSRev21.json
+python run_pipeline.py                                          # if you want to run the pipeline only on the newest release
+python run_pipeline.py --old 2026HTSRev10 --new 2026HTSRev11    # a specific pair of release
+python run_pipeline.py --check-only                             # just check for a new release
 ```
+Add `--no-llm` for template summaries (no API key needed). Then commit and push `docs/latest/` so the website and extension update. The report is published at `https://jasia03.github.io/<repo>/latest/report.html`.
 
-## 1. USITC data access: confirmed
+## Chrome extension
 
-Both endpoints were tested live on 2026-10-16. Neither needs an API key.
+1. Open `chrome://extensions`, turn on **Developer mode** -> **Load unpacked** -> `extension/` folder.
+2. Click the extension's icon and paste `https://jasia03.github.io/<repo>/latest/alert.json`.
+The extension pop-up shows how many changes happened and their tiers and what action is needed : to act, to decide, and not relevant to CPSC.
 
-| Purpose | Endpoint |
-|---|---|
-| List of releases (for the monitor) | `https://hts.usitc.gov/reststop/releaseList` |
-| Full revision, JSON | `https://www.usitc.gov/sites/default/files/tata/hts/hts_{YEAR}_revision_{N}_json.json` |
-| Basic edition, JSON | `https://www.usitc.gov/sites/default/files/tata/hts/hts_{YEAR}_basic_edition_json.json` |
+## Reviewer feedback
 
-The current release is **2026HTSRev21**, effective 10/09/2026. The monitor only needs to poll `releaseList` and watch for a new entry with `"status": "current"`.
+Each change in the report has **Right** and **Wrong** buttons. Click **Download review**, put the file in `data/feedback/inbox/`, then run:
+```bash
+python feedback.py import    # save the decisions
+python feedback.py stats     # how often each label was right
+```
+The next pipeline run applies the decisions.
 
-There are 55 releases in scope: the 2025 Basic edition plus 32 revisions, and the 2026 Basic edition plus 21 revisions. They are listed in `releases_2025_2026.csv`. 2026 is on pace to exceed 2025's count.
+## Main files
 
-### Things in the data that will bite the diff engine
+| File | Purpose |
+| --- | --- |
+| `run_pipeline.py` | Runs every step with one command |
+| `download_hts.py` | Downloads HTS releases from USITC |
+| `appendix_b_raw.txt`, `appendix_b.py` | CPSC's Appendix B, turned into 294 rules |
+| `diff.py` | Finds every change between two releases |
+| `relevance.py`, `cpsc_vocabulary.csv` | Labels each change |
+| `summarize.py` | Writes the plain-English summaries |
+| `report.py` | Builds the report and `alert.json` |
+| `feedback.py` | Merges reviewer decisions |
+| `validate_appendix_b.py`, `trace_dead_codes.py` | Find Appendix B rules that no longer match any code |
+| `extension/` | The Chrome extension |
 
-- **Release names are inconsistent across years.** Examples include `2023HTSARev4a`, `NTE`, and `chapter98`, and the list isn't sorted. Order releases by `releaseStartDate`, not by name.
-- **Text-only header rows.** Some rows have an empty `htsno` and `"superior": "true"` (e.g. "Horses:"). They carry meaning for the parent chain, so keep them for hierarchy and skip them when matching codes.
-- **Rates live on the 8-digit line.** The 10-digit statistical lines under it have blank rate fields and must inherit from their parent.
-- `indent` is a string, `htsno` has dots, and there's a misspelled field `addiitionalDuties` alongside `additionalDuties`.
-- **Many lines footnote Chapter 99** (e.g. "See 9903.88.15"). Those are the rate-only changes you want to separate from structural ones.
+## Tests
 
-## 2. Appendix B: parsed, and it's not what the brief implies
+```bash
+for t in test_*.py; do python $t | tail -1; done
+```
+38 tests across 6 files. They use small sample data, so no internet or API key is needed.
 
-The July 2026 Appendix B, from the CPSC memo dated Aug 4, 2026, is **not a list of ~600 codes**. It has 65 line items that expand to **294 rules**:
+## Known limits
 
-- 16 whole chapters (e.g. Chapter 95 inclusive)
-- 111 ranges
-- 167 headings, subheadings, or codes, including `xx` wildcards
-- exclusions such as `3926 (except 3926.20.1010 and 3926.90.3000)`
-
-So Tier 1 relevance has to be a rule match (`appendix_b.covered_by(code)`), not a set lookup. Run the validator to get the expanded 10-digit count. It will be far more than 600.
-
-`appendix_b_raw.txt` is a hand-cleaned transcription. The PDF's two-column layout interleaves codes with descriptions (items 14, 15, 55, 56, 57, 59, 63), so automated text extraction scrambles them. Spot-check it against the PDF once.
-
-### Defects found in Appendix B itself
-
-These are worth showing judges, since they demonstrate why validation matters:
-
-| Item | Issue |
-|---|---|
-| 55 | `8409.91.1040 8409.91.1080` has no separator. It was probably meant as a range. |
-| 55 | `8401.91.30xx-8409.91.50xx` is probably a typo for `8409.91.30xx`, since heading 8401 is nuclear reactors. |
-| 46 | `7419.91` and `7419.99.xxxx` look stale; heading 7419 was restructured in the 2022 HS edition. The validator will confirm. |
-| 6, 46, 57, 63 | Ten rules carry human qualifiers ("where applies", "people only", "campers", "except aircraft/automotive"). A machine can't resolve these, so they're flagged `needs_review`. |
-
-## 3. A free ground-truth case
-
-The memo says USITC **split 8707.10.0040 into two codes** (vehicle bodies), and CPSC responded by listing 8707.10.0090. This is a real "HTS changed, CPSC acted" event, which makes it the first backtest: the diff engine should flag it as a Tier 1 split. Diffing the July 2026 revisions (Rev 11 through Rev 15) will show which revision introduced it.
-
-## Files
-
-| File | What |
-|---|---|
-| `appendix_b_raw.txt` | Cleaned 65-item transcription |
-| `appendix_b.py` | Parser + `covered_by()` matcher + self-tests (all pass) |
-| `appendix_b_rules.csv` | 294 rules with bounds, exclusions, review flags |
-| `download_hts.py` | Downloads all releases, writes `data/manifest.csv` with SHA-256 |
-| `validate_appendix_b.py` | Checks every rule against a snapshot; outputs the expanded code list |
-| `releases_2025_2026.csv` | Release inventory with effective dates |
+- USITC sometimes blocks automated downloads (HTTP 403). If that happens, download the file in a browser, save it as `data/raw/<release name>.json`, and run again.
+- The product word list for "similar wording" is a starter list; extend it over time.
+- Item 55 of Appendix B was corrected from `8401.91.30xx` to `8409.91.30xx` (a likely typo). 
+- Keep `.env` and `data/raw/` out of Git.
